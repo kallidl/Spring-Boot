@@ -1,6 +1,7 @@
 package com.example.demo2;
 
 import com.example.demo2.domain.Consumer;
+import com.example.demo2.domain.User;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -14,6 +15,9 @@ class Demo2ApplicationTests {
 
     @Autowired
     private Environment env;
+
+    @Autowired
+    private User user;
 
     @Test
     void wiredTest() {
@@ -32,6 +36,10 @@ class Demo2ApplicationTests {
     @Test
     void confTest() {
         System.out.println(consumer);
+    }
+    @Test
+    void propTest() {
+        System.out.println(user);
     }
 
 }
