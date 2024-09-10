@@ -1,0 +1,5 @@
+consumer:
+  username: lisi
+  age: 23
+  hobby: sing,read,sleep
+  subject: 100,150
