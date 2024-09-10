@@ -2,22 +2,23 @@ package com.example.demo2.domain;
 
 
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
 import java.util.Arrays;
 import java.util.List;
 
 @Component
-
+@ConfigurationProperties(prefix = "consumer")
 public class Consumer {
-    @Value("${consumer.username}")
+
     private String username;
-    @Value("${consumer.age}")
+
     private int age;
 
-    @Value("#{'${consumer.hobby}'.split(',')}")
+
     private String[] hobby;
-    @Value("${consumer.subject}")
+
     private List subject;
 
 

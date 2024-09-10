@@ -28,4 +28,10 @@ class Demo2ApplicationTests {
         System.out.println("consumer.hobby=" + env.getProperty("consumer.hobby"));
         System.out.println("consumer.subject=" + env.getProperty("consumer.subject"));
     }
+
+    @Test
+    void confTest() {
+        System.out.println(consumer);
+    }
+
 }
