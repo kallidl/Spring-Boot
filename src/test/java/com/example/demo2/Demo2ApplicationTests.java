@@ -2,6 +2,7 @@ package com.example.demo2;
 
 import com.example.demo2.domain.Consumer;
 import com.example.demo2.domain.User;
+import com.example.demo2.service.MyService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -24,6 +25,9 @@ class Demo2ApplicationTests {
         System.out.println(consumer);
     }
 
+    @Autowired
+    private MyService myService;
+
 
     @Test
     void evnTest() {
@@ -37,9 +41,14 @@ class Demo2ApplicationTests {
     void confTest() {
         System.out.println(consumer);
     }
+
     @Test
     void propTest() {
         System.out.println(user);
     }
 
+    @Test
+    void beanTest() {
+        myService.getById("18");
+    }
 }
